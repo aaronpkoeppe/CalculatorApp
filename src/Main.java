@@ -14,35 +14,25 @@ public class Main {
         while (true) {
             counter++;
             if (counter == 0) {
-                System.out.println("please enter a number corresponding to which calculator you would like to use\n");
+                System.out.println("please enter a number corresponding to which operation you would like to use\n");
             }
             else if (counter > 0) {
-                System.out.println("Please choose which calculator you would like to use for your next question\n");
+                System.out.println("Please choose which operation you would like to use for your next question\n");
             }
-        System.out.println("press 0 to exit");
-        System.out.println("press 1 for basic calculator(addition, subtraction, multiplication, division)");
-        System.out.println("press 2 for advanced calculator(power, square root)");
+            System.out.println("press 0 to exit");
+            System.out.println("press 1 for addition operations");
+            System.out.println("press 2 for subtraction operations");
+            System.out.println("press 3 for multiplication operations");
+            System.out.println("press 4 for division operations");
+            System.out.println("press 5 for power operations");
+            System.out.println("press 6 for square root operations");
+            System.out.println("press 7 to clear memory");
 
-
-        System.out.println("please enter the number corresponding to the calculator you would like to use\n");
         Scanner sc = new Scanner(System.in);
-        int z = Integer.parseInt(sc.nextLine());
-            switch (z) {
-                case 0:
-                    System.out.println("thank you for using the calculator app :)");
-                    System.exit(0);
-
-                case 1:
-                    System.out.println("you have chosen the basic calculator");
-
-                    System.out.println("please enter an operation number");
-                    System.out.println("---------------------------\n");
-                    System.out.println("press 1 for addition operations");
-                    System.out.println("press 2 for subtraction operations");
-                    System.out.println("press 3 for multiplication operations");
-                    System.out.println("press 4 for division operations");
-                    double x, y;
                     switch (Integer.parseInt(sc.nextLine())) {
+                        case 0:
+                            System.out.println("thank you for using the calculator app :)");
+                            System.exit(0);
                         case 1:
                             System.out.println("you have chosen addition");
                             System.out.println("please enter your first number");
@@ -53,39 +43,40 @@ public class Main {
                             double yToAdd = y1.equals("M") ? memory.memoryRecall() : Double.parseDouble(y1);
                             System.out.println("the sum of your numbers is " + basicCalculator.add(xToAdd, yToAdd) + "\n");
                             memory.setMemoryValue(basicCalculator.add(xToAdd, yToAdd));
-                            System.out.println();
+                            System.out.println("would you like to perform another operation? (y/n) \n");
                             if (sc.next().equals("n")) { // requires a double input to work
-                                z = 0;
                                 System.out.println("thank you for using the calculator app :)");
                                 exit();
-                                break;
+
                             }
                             break;
 
                         case 2:
                             System.out.println("you have chosen subtraction\n");
                             System.out.println("please enter your first number");
-                            x = sc.nextDouble();
+                            x1 = sc.nextLine();
+                            xToAdd = x1.equals("M") ? memory.memoryRecall() : Double.parseDouble(x1);
                             System.out.println("please enter your second number");
-                            y = sc.nextDouble();
-                            System.out.println("the difference of your numbers is " + basicCalculator.subtract(x, y) + "\n");
-                            memory.setMemoryValue(basicCalculator.subtract(x, y));
-                            System.out.println(memory.memoryRecall()); // stores the value properly. need to figure out how to allow the user to access it after being stored for future questions.
-                            System.out.println("would you like to perform another operation? y/n \n");
+                            y1 = sc.nextLine();
+                            yToAdd = y1.equals("M") ? memory.memoryRecall() : Double.parseDouble(y1);
+                            System.out.println("the difference of your numbers is " + basicCalculator.subtract(xToAdd, yToAdd) + "\n");
+                            memory.setMemoryValue(basicCalculator.subtract(xToAdd, yToAdd));
+                            System.out.println("would you like to perform another operation? (y/n) \n");
                             if (sc.next().equals("n")) { // requires a double input to work
-                                z = 0;
                                 System.out.println("thank you for using the calculator app :)");
                                 exit();
-                                break;
                             }
                             break;
                         case 3:
                             System.out.println("you have chosen multiplication\n");
                             System.out.println("please enter your first number");
-                            x = sc.nextDouble();
+                            x1 = sc.nextLine();
+                            xToAdd = x1.equals("M") ? memory.memoryRecall() : Double.parseDouble(x1);
                             System.out.println("please enter your second number");
-                            y = sc.nextDouble();
-                            System.out.println("the product of your numbers is " + basicCalculator.multiply(x, y) + "\n");
+                            y1 = sc.nextLine();
+                            yToAdd = y1.equals("M") ? memory.memoryRecall() : Double.parseDouble(y1);
+                            System.out.println("the product of your numbers is " + basicCalculator.multiply(xToAdd, yToAdd) + "\n");
+                            System.out.println("would you like to perform another operation? (y/n) \n");
                             if (sc.next().equals("n")) { // requires a double input to work
                                 System.out.println("thank you for using the calculator app :)");
                                 exit();
@@ -94,45 +85,51 @@ public class Main {
                         case 4:
                             System.out.println("you have chosen division\n");
                             System.out.println("please enter your first number");
-                            x = sc.nextDouble();
+                            x1 = sc.nextLine();
+                            xToAdd = x1.equals("M") ? memory.memoryRecall() : Double.parseDouble(x1);
                             System.out.println("please enter your second number");
-                            y = sc.nextDouble();
-                            System.out.println("the quotient of your numbers is " + basicCalculator.divide(x, y) + "\n");
+                            y1 = sc.nextLine();
+                            yToAdd = y1.equals("M") ? memory.memoryRecall() : Double.parseDouble(y1);
+                            System.out.println("the quotient of your numbers is " + basicCalculator.divide(xToAdd, yToAdd) + "\n");
+                            System.out.println("would you like to perform another operation? (y/n) \n");
+                            if (sc.next().equals("n")) { // requires a double input to work
+                                System.out.println("thank you for using the calculator app :)");
+                                exit();
+                            }
                             break;
+                        case 5:
+                            System.out.println("you have chosen the power operation");
+                            System.out.println("please enter your first number");
+                            x1 = sc.nextLine();
+                            xToAdd = x1.equals("M") ? memory.memoryRecall() : Double.parseDouble(x1);
+                            System.out.println("please enter your second number");
+                            y1 = sc.nextLine();
+                            yToAdd = y1.equals("M") ? memory.memoryRecall() : Double.parseDouble(y1);
+                            System.out.println("the power of " + xToAdd + " to " + yToAdd + "= " + advancedCalculator.pow(xToAdd, yToAdd) + "\n");
+                            System.out.println("would you like to perform another operation? (y/n) \n");
+                            if (sc.next().equals("n")) { // requires a double input to work
+                                System.out.println("thank you for using the calculator app :)");
+                                exit();
+                            }
+                            break;
+                        case 6:
+                            System.out.println("you have chosen the square root operation");
+                            System.out.println("please enter your number");
+                            x1 = sc.nextLine();
+                            xToAdd = x1.equals("M") ? memory.memoryRecall() : Double.parseDouble(x1);
+                            System.out.println("the square root of your number is " + advancedCalculator.sqrt(xToAdd) + "\n");
+                            System.out.println("would you like to perform another operation? (y/n) \n");
+                            if (sc.next().equals("n")) { // requires a double input to work
+                                System.out.println("thank you for using the calculator app :)");
+                                exit();
+                            }
+                            break;
+                        case 7:
+                            memory.memoryClear();
+                            break;
+
+
                     }
-            }
-            switch (z) {
-                case 2:
-                    System.out.println("you have chosen the advanced calculator");
-                    System.out.println("please enter an operation number");
-                    System.out.println("---------------------------\n");
-                    System.out.println("press 1 for power operations");
-                    System.out.println("press 2 for square root operations");
-                 switch (sc.nextInt()) {
-                     case 1:
-                         System.out.println("you have chosen the power operation");
-                         System.out.println("please enter your first number");
-                         double x = sc.nextDouble();
-                         System.out.println("please enter your second number");
-                         double y = sc.nextDouble();
-                         System.out.println("the power of " + x + " to " + y + "= " + advancedCalculator.pow(x, y) + "\n");
-                         if (sc.next().equals("n")) { // requires a double input to work
-                             System.out.println("thank you for using the calculator app :)");
-                             exit();
-                         }
-                         break;
-                     case 2:
-                         System.out.println("you have chosen the square root operation");
-                         System.out.println("please enter your number");
-                         x = sc.nextDouble();
-                         System.out.println("the square root of your number is " + advancedCalculator.sqrt(x) + "\n");
-                         if (sc.next().equals("n")) { // requires a double input to work
-                             System.out.println("thank you for using the calculator app :)");
-                             exit();
-                         }
-                         break;
-                 }
-            }
         }
     }
 

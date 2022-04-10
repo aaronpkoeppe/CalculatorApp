@@ -7,7 +7,7 @@ public class Memory extends Calculator {
 
     public void memoryClear() {
         memoryValue = 0.0;
-        System.out.println("memory cleared");
+        System.out.println("memory cleared\n");
     }
 
     public void memoryAdd(double y) {
