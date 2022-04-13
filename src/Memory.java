@@ -15,6 +15,7 @@ public class Memory extends Calculator {
 
     /**
      * setter used to set memoryValue after the solving of a operation within main.
+     *
      * @param memoryValue - sets memoryValue to the sum of whatever two numbers or single number was used in the previous operation.
      */
     public void setMemoryValue(double memoryValue) {
@@ -31,6 +32,7 @@ public class Memory extends Calculator {
 
     /**
      * returns the most recent memoryValue.
+     *
      * @return memoryValue
      */
     public double memoryRecall() {

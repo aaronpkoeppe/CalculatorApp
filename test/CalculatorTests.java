@@ -29,29 +29,33 @@ public class CalculatorTests {
         assertEquals(1, calculator.subtract(3, 2));
         assertEquals(-3000.5, calculator.subtract(1000, 4000.5));
     }
+
     @Test
-    public void testDivision(){
+    public void testDivision() {
         Calculator calculator = new Calculator();
         assertEquals(4, calculator.divide(20, 5));
         assertEquals(20, calculator.divide(40, 2));
         assertEquals(10.5, calculator.divide(105, 10));
     }
+
     @Test
-    public void testMultiplication(){
+    public void testMultiplication() {
         Calculator calculator = new Calculator();
         assertEquals(55, calculator.multiply(11, 5));
         assertEquals(1000, calculator.multiply(500, 2));
         assertEquals(358.8, calculator.multiply(179.4, 2));
     }
+
     @Test
-    public void testPower(){
+    public void testPower() {
         AdvancedCalc advancedCalc = new AdvancedCalc();
-        assertEquals(125, advancedCalc.pow(5, 3) );
+        assertEquals(125, advancedCalc.pow(5, 3));
         assertEquals(10000, advancedCalc.pow(10, 4));
         assertEquals(12.25, advancedCalc.pow(3.5, 2));
     }
+
     @Test
-    public void testSquareRoot(){
+    public void testSquareRoot() {
         AdvancedCalc advancedCalc = new AdvancedCalc();
         assertEquals(8, advancedCalc.sqrt(64));
         assertEquals(10, advancedCalc.sqrt(100));

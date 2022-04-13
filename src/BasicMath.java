@@ -12,7 +12,10 @@ public interface BasicMath {
      * All doubles within this interface are described within the Calculator.java file.
      */
     double add(double a, double b);
+
     double subtract(double a, double b);
+
     double multiply(double a, double b);
+
     double divide(double a, double b);
 }

@@ -12,5 +12,6 @@ public interface AdvancedMath {
      * all doubles within the AdvancedMath interface are described within the AdvancedCalc.java file.
      */
     double pow(double x, double y);
+
     double sqrt(double x);
 }

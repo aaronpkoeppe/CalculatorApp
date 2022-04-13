@@ -10,6 +10,7 @@ Version: 1.0
 public class Calculator implements BasicMath {
     /**
      * Adds addition functionality to the Calculator to be used within the main class.
+     *
      * @param a - First value used within the addition equation.
      * @param b - Second value used within the addition equation.
      * @return the sum of (a + b).
@@ -21,6 +22,7 @@ public class Calculator implements BasicMath {
 
     /**
      * Adds subtraction functionality to the Calculator to be used within the main class.
+     *
      * @param a - First value used within the subtraction equation.
      * @param b - Second value used within the subtraction equation.
      * @return the difference of (a - b).
@@ -32,6 +34,7 @@ public class Calculator implements BasicMath {
 
     /**
      * Adds the multiplication functionality to the Calculator to be used within the main class.
+     *
      * @param a - First value used within the multiplication equation.
      * @param b - Second value used within the multiplication equation.
      * @return the product  of (a * b).
@@ -43,6 +46,7 @@ public class Calculator implements BasicMath {
 
     /**
      * Add the division fucntionality to the Calculator to be used wirthin the main class.
+     *
      * @param a - First value used within the division equation.
      * @param b - Second value used within the division equation.
      * @return the product of (a / b).

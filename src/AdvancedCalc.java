@@ -10,6 +10,7 @@ Version: 1.0
 public class AdvancedCalc implements AdvancedMath {
     /**
      * Adds the square root operation to the AdvancedCalc to be used within main.
+     *
      * @param x - First  and only value used in the operation to solve the square root
      * @return the square root of x.
      */
@@ -20,6 +21,7 @@ public class AdvancedCalc implements AdvancedMath {
 
     /**
      * Adds the power to operation to AdvancedCalc to be used within main.
+     *
      * @param x - First value used within the power to operation.
      * @param y - Second value used within the power to operation.
      * @return - the power of value y to the value of x.
